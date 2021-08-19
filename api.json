@@ -1,0 +1,1930 @@
+{
+  "apis": [
+    {
+      "id": "user-user-details",
+      "needed_permissions": "com.cloudflare.api.user.read",
+      "method": "GET",
+      "url": "user"
+    },
+    {
+      "id": "user-edit-user",
+      "needed_permissions": "com.cloudflare.api.user.update",
+      "method": "PATCH",
+      "url": "user"
+    },
+    {
+      "id": "user-api-tokens-list-tokens",
+      "needed_permissions": "com.cloudflare.api.token.list",
+      "method": "GET",
+      "url": "user/tokens"
+    },
+    {
+      "id": "user-api-tokens-create-token",
+      "needed_permissions": "com.cloudflare.api.token.create",
+      "method": "POST",
+      "url": "user/tokens"
+    },
+    {
+      "id": "user-api-tokens-token-details",
+      "needed_permissions": "com.cloudflare.api.token.read",
+      "method": "GET",
+      "url": "user/tokens/:identifier"
+    },
+    {
+      "id": "user-api-tokens-update-token",
+      "needed_permissions": "com.cloudflare.api.token.update",
+      "method": "PUT",
+      "url": "user/tokens/:identifier"
+    },
+    {
+      "id": "user-api-tokens-delete-token",
+      "needed_permissions": "com.cloudflare.api.token.delete",
+      "method": "DELETE",
+      "url": "user/tokens/:identifier"
+    },
+    {
+      "id": "user-api-tokens-roll-token",
+      "needed_permissions": "com.cloudflare.api.token.update",
+      "method": "PUT",
+      "url": "user/tokens/:identifier/value"
+    },
+    {
+      "id": "permission-groups-list-permission-groups",
+      "needed_permissions": "com.cloudflare.api.token.read",
+      "method": "GET",
+      "url": "user/tokens/permission_groups"
+    },
+    {
+      "id": "accounts-list-accounts",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts"
+    },
+    {
+      "id": "accounts-account-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:identifier"
+    },
+    {
+      "id": "accounts-update-account",
+      "needed_permissions": "#organization:edit",
+      "method": "PUT",
+      "url": "accounts/:identifier"
+    },
+    {
+      "id": "account-members-list-members",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/members"
+    },
+    {
+      "id": "account-members-add-member",
+      "needed_permissions": "#organization:edit",
+      "method": "POST",
+      "url": "accounts/:account_identifier/members"
+    },
+    {
+      "id": "account-members-member-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/members/:identifier"
+    },
+    {
+      "id": "account-members-update-member",
+      "needed_permissions": "#organization:edit",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/members/:identifier"
+    },
+    {
+      "id": "account-members-remove-member",
+      "needed_permissions": "#organization:edit",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/members/:identifier"
+    },
+    {
+      "id": "account-roles-list-roles",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/roles"
+    },
+    {
+      "id": "account-roles-role-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/roles/:identifier"
+    },
+    {
+      "id": "account-subscriptions-list-subscriptions",
+      "needed_permissions": "#billing:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/subscriptions"
+    },
+    {
+      "id": "account-subscriptions-create-subscription",
+      "needed_permissions": "#billing:read#billing:edit",
+      "method": "POST",
+      "url": "accounts/:account_identifier/subscriptions"
+    },
+    {
+      "id": "account-subscriptions-update-subscription",
+      "needed_permissions": "#billing:read#billing:edit",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/subscriptions/:subscription_identifier"
+    },
+    {
+      "id": "account-subscriptions-delete-subscription",
+      "needed_permissions": "#billing:edit",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/subscriptions/:subscription_identifier"
+    },
+    {
+      "id": "organizations-organization-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "organizations/:identifier"
+    },
+    {
+      "id": "organizations-edit-organization",
+      "needed_permissions": "#organization:edit",
+      "method": "PATCH",
+      "url": "organizations/:identifier"
+    },
+    {
+      "id": "organization-invites-list-invitations",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "organizations/:organization_identifier/invites"
+    },
+    {
+      "id": "organization-invites-create-invitation",
+      "needed_permissions": "#organization:edit",
+      "method": "POST",
+      "url": "organizations/:organization_identifier/invites"
+    },
+    {
+      "id": "organization-invites-invitation-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "organizations/:organization_identifier/invites/:identifier"
+    },
+    {
+      "id": "organization-invites-edit-invitation-roles",
+      "needed_permissions": "#organization:edit",
+      "method": "PATCH",
+      "url": "organizations/:organization_identifier/invites/:identifier"
+    },
+    {
+      "id": "organization-invites-cancel-invitation",
+      "needed_permissions": "#organization:edit",
+      "method": "DELETE",
+      "url": "organizations/:organization_identifier/invites/:identifier"
+    },
+    {
+      "id": "organization-members-list-members",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "organizations/:organization_identifier/members"
+    },
+    {
+      "id": "organization-members-member-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "organizations/:organization_identifier/members/:identifier"
+    },
+    {
+      "id": "organization-members-edit-member-roles",
+      "needed_permissions": "#organization:edit",
+      "method": "PATCH",
+      "url": "organizations/:organization_identifier/members/:identifier"
+    },
+    {
+      "id": "organization-members-remove-member",
+      "needed_permissions": "#organization:edit",
+      "method": "DELETE",
+      "url": "organizations/:organization_identifier/members/:identifier"
+    },
+    {
+      "id": "organization-roles-list-roles",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "organizations/:organization_identifier/roles"
+    },
+    {
+      "id": "organization-roles-role-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "organizations/:organization_identifier/roles/:identifier"
+    },
+    {
+      "id": "user-billing-profile-billing-profile-details",
+      "needed_permissions": "#billing:read",
+      "method": "GET",
+      "url": "user/billing/profile"
+    },
+    {
+      "id": "user-billing-history-billing-history-details",
+      "needed_permissions": "#billing:read",
+      "method": "GET",
+      "url": "user/billing/history"
+    },
+    {
+      "id": "user-subscription-get-user-subscriptions",
+      "needed_permissions": "#billing:read",
+      "method": "GET",
+      "url": "user/subscriptions"
+    },
+    {
+      "id": "user-subscription-update-user-subscription",
+      "needed_permissions": "#billing:read#billing:edit",
+      "method": "PUT",
+      "url": "user/subscriptions/:identifier"
+    },
+    {
+      "id": "user-subscription-delete-user-subscription",
+      "needed_permissions": "#billing:edit",
+      "method": "DELETE",
+      "url": "user/subscriptions/:identifier"
+    },
+    {
+      "id": "account-billing-profile-billing-profile-details",
+      "needed_permissions": "#billing:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/billing/profile"
+    },
+    {
+      "id": "zone-rate-plan-list-available-rate-plans",
+      "needed_permissions": "#billing:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/available_rate_plans"
+    },
+    {
+      "id": "zone-rate-plan-list-available-plans",
+      "needed_permissions": "#billing:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/available_plans"
+    },
+    {
+      "id": "zone-rate-plan-available-plan-details",
+      "needed_permissions": "#billing:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/available_plans/:plan_identifier"
+    },
+    {
+      "id": "zone-subscription-zone-subscription-details",
+      "needed_permissions": "#billing:read",
+      "method": "GET",
+      "url": "zones/:identifier/subscription"
+    },
+    {
+      "id": "zone-subscription-update-zone-subscription",
+      "needed_permissions": "#billing:read#billing:edit",
+      "method": "PUT",
+      "url": "zones/:identifier/subscription"
+    },
+    {
+      "id": "zone-subscription-create-zone-subscription",
+      "needed_permissions": "#billing:read#billing:edit",
+      "method": "POST",
+      "url": "zones/:identifier/subscription"
+    },
+    {
+      "id": "argo-smart-routing-get-argo-smart-routing-setting",
+      "needed_permissions": "#argo:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/argo/smart_routing"
+    },
+    {
+      "id": "argo-smart-routing-patch-argo-smart-routing-setting",
+      "needed_permissions": "#argo:read#argo:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/argo/smart_routing"
+    },
+    {
+      "id": "argo-analytics-for-zone-argo-analytics-for-a-zone",
+      "needed_permissions": "#analytics:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/analytics/latency"
+    },
+    {
+      "id": "argo-analytics-for-geolocation-argo-analytics-for-a-zone-at-differnt-pops",
+      "needed_permissions": "#analytics:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/analytics/latency/colos"
+    },
+    {
+      "id": "zone-list-zones",
+      "needed_permissions": "#zone:read",
+      "method": "GET",
+      "url": "zones"
+    },
+    {
+      "id": "zone-create-zone",
+      "needed_permissions": "#zone:edit",
+      "method": "POST",
+      "url": "zones"
+    },
+    {
+      "id": "zone-zone-details",
+      "needed_permissions": "#zone:read",
+      "method": "GET",
+      "url": "zones/:identifier"
+    },
+    {
+      "id": "zone-delete-zone",
+      "needed_permissions": "#zone:edit",
+      "method": "DELETE",
+      "url": "zones/:identifier"
+    },
+    {
+      "id": "zone-zone-activation-check",
+      "needed_permissions": "#zone:edit",
+      "method": "PUT",
+      "url": "zones/:identifier/activation_check"
+    },
+    {
+      "id": "zone-purge-all-files",
+      "needed_permissions": "#cache_purge:edit",
+      "method": "POST",
+      "url": "zones/:identifier/purge_cache"
+    },
+    {
+      "id": "zone-purge-files-by-url",
+      "needed_permissions": "#cache_purge:edit",
+      "method": "POST",
+      "url": "zones/:identifier/purge_cache"
+    },
+    {
+      "id": "zone-purge-files-by-cache-tags,-host-or-prefix",
+      "needed_permissions": "#cache_purge:edit",
+      "method": "POST",
+      "url": "zones/:identifier/purge_cache"
+    },
+    {
+      "id": "zone-settings-get-all-zone-settings",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings"
+    },
+    {
+      "id": "zone-settings-get-advanced-ddos-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/advanced_ddos"
+    },
+    {
+      "id": "zone-settings-get-always-online-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/always_online"
+    },
+    {
+      "id": "zone-settings-get-always-use-https-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/always_use_https"
+    },
+    {
+      "id": "zone-settings-get-opportunistic-onion-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/opportunistic_onion"
+    },
+    {
+      "id": "zone-settings-get-orange-to-orange-o2o-",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/orange_to_orange"
+    },
+    {
+      "id": "zone-settings-get-automatic-https-rewrites-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/automatic_https_rewrites"
+    },
+    {
+      "id": "zone-settings-get-browser-cache-ttl-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/browser_cache_ttl"
+    },
+    {
+      "id": "zone-settings-get-browser-check-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/browser_check"
+    },
+    {
+      "id": "zone-settings-get-cache-level-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/cache_level"
+    },
+    {
+      "id": "zone-settings-get-challenge-ttl-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/challenge_ttl"
+    },
+    {
+      "id": "zone-settings-get-development-mode-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/development_mode"
+    },
+    {
+      "id": "zone-settings-get-email-obfuscation-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/email_obfuscation"
+    },
+    {
+      "id": "zone-settings-get-hotlink-protection-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/hotlink_protection"
+    },
+    {
+      "id": "zone-settings-get-ip-geolocation-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/ip_geolocation"
+    },
+    {
+      "id": "zone-settings-get-ipv6-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/ipv6"
+    },
+    {
+      "id": "zone-settings-get-minify-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/minify"
+    },
+    {
+      "id": "zone-settings-get-mobile-redirect-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/mobile_redirect"
+    },
+    {
+      "id": "zone-settings-get-mirage-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/mirage"
+    },
+    {
+      "id": "zone-settings-get-enable-error-pages-on-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/origin_error_page_pass_thru"
+    },
+    {
+      "id": "zone-settings-get-opportunistic-encryption-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/opportunistic_encryption"
+    },
+    {
+      "id": "zone-settings-get-polish-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/polish"
+    },
+    {
+      "id": "zone-settings-get-webp-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/webp"
+    },
+    {
+      "id": "zone-settings-get-brotli-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/brotli"
+    },
+    {
+      "id": "zone-settings-get-prefetch-preload-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/prefetch_preload"
+    },
+    {
+      "id": "zone-settings-get-privacy-pass-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/privacy_pass"
+    },
+    {
+      "id": "zone-settings-get-response-buffering-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/response_buffering"
+    },
+    {
+      "id": "zone-settings-get-rocket-loader-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/rocket_loader"
+    },
+    {
+      "id": "zone-settings-get-security-header-hsts-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/security_header"
+    },
+    {
+      "id": "zone-settings-get-security-level-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/security_level"
+    },
+    {
+      "id": "zone-settings-get-server-side-exclude-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/server_side_exclude"
+    },
+    {
+      "id": "zone-settings-get-enable-query-string-sort-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/sort_query_string_for_cache"
+    },
+    {
+      "id": "zone-settings-get-ssl-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/ssl"
+    },
+    {
+      "id": "zone-settings-get-minimum-tls-version-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/min_tls_version"
+    },
+    {
+      "id": "zone-settings-get-ciphers-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/ciphers"
+    },
+    {
+      "id": "zone-settings-get-zone-enable-tls-1.3-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/tls_1_3"
+    },
+    {
+      "id": "zone-settings-get-tls-client-auth-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/tls_client_auth"
+    },
+    {
+      "id": "zone-settings-get-true-client-ip-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/true_client_ip_header"
+    },
+    {
+      "id": "zone-settings-get-web-application-firewall-waf-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/waf"
+    },
+    {
+      "id": "zone-settings-get-http2-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/http2"
+    },
+    {
+      "id": "zone-settings-get-http3-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/http3"
+    },
+    {
+      "id": "zone-settings-get-0-rtt-session-resumption-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/0rtt"
+    },
+    {
+      "id": "zone-settings-get-pseudo-ipv4-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/pseudo_ipv4"
+    },
+    {
+      "id": "zone-settings-get-websockets-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/websockets"
+    },
+    {
+      "id": "zone-settings-get-image-resizing-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/image_resizing"
+    },
+    {
+      "id": "zone-settings-get-http/2-edge-prioritization-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/h2_prioritization"
+    },
+    {
+      "id": "zone-settings-get-automatic-platform-optimization-for-wordpress-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/automatic_platform_optimization"
+    },
+    {
+      "id": "zone-settings-edit-zone-settings-info",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings"
+    },
+    {
+      "id": "zone-settings-change-always-online-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/always_online"
+    },
+    {
+      "id": "zone-settings-change-always-use-https-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/always_use_https"
+    },
+    {
+      "id": "zone-settings-change-opportunistic-onion-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/opportunistic_onion"
+    },
+    {
+      "id": "zone-settings-change-orange-to-orange-o2o-",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/orange_to_orange"
+    },
+    {
+      "id": "zone-settings-change-automatic-https-rewrites-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/automatic_https_rewrites"
+    },
+    {
+      "id": "zone-settings-change-browser-cache-ttl-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/browser_cache_ttl"
+    },
+    {
+      "id": "zone-settings-change-browser-check-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/browser_check"
+    },
+    {
+      "id": "zone-settings-change-cache-level-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/cache_level"
+    },
+    {
+      "id": "zone-settings-change-challenge-ttl-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/challenge_ttl"
+    },
+    {
+      "id": "zone-settings-change-development-mode-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/development_mode"
+    },
+    {
+      "id": "zone-settings-change-email-obfuscation-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/email_obfuscation"
+    },
+    {
+      "id": "zone-settings-change-enable-error-pages-on-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/origin_error_page_pass_thru"
+    },
+    {
+      "id": "zone-settings-change-enable-query-string-sort-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/sort_query_string_for_cache"
+    },
+    {
+      "id": "zone-settings-change-hotlink-protection-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/hotlink_protection"
+    },
+    {
+      "id": "zone-settings-change-ip-geolocation-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/ip_geolocation"
+    },
+    {
+      "id": "zone-settings-change-ipv6-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/ipv6"
+    },
+    {
+      "id": "zone-settings-change-minify-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/minify"
+    },
+    {
+      "id": "zone-settings-change-mobile-redirect-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/mobile_redirect"
+    },
+    {
+      "id": "zone-settings-change-mirage-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/mirage"
+    },
+    {
+      "id": "zone-settings-change-opportunistic-encryption-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/opportunistic_encryption"
+    },
+    {
+      "id": "zone-settings-change-polish-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/polish"
+    },
+    {
+      "id": "zone-settings-change-webp-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/webp"
+    },
+    {
+      "id": "zone-settings-change-brotli-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/brotli"
+    },
+    {
+      "id": "zone-settings-change-prefetch-preload-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/prefetch_preload"
+    },
+    {
+      "id": "zone-settings-change-privacy-pass-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/privacy_pass"
+    },
+    {
+      "id": "zone-settings-change-response-buffering-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/response_buffering"
+    },
+    {
+      "id": "zone-settings-change-rocket-loader-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/rocket_loader"
+    },
+    {
+      "id": "zone-settings-change-security-header-hsts-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/security_header"
+    },
+    {
+      "id": "zone-settings-change-security-level-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/security_level"
+    },
+    {
+      "id": "zone-settings-change-server-side-exclude-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/server_side_exclude"
+    },
+    {
+      "id": "zone-settings-change-ssl-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/ssl"
+    },
+    {
+      "id": "zone-settings-change-tls-client-auth-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/tls_client_auth"
+    },
+    {
+      "id": "zone-settings-change-true-client-ip-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/true_client_ip_header"
+    },
+    {
+      "id": "zone-settings-change-minimum-tls-version-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/min_tls_version"
+    },
+    {
+      "id": "zone-settings-change-ciphers-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/ciphers"
+    },
+    {
+      "id": "zone-settings-change-tls-1.3-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/tls_1_3"
+    },
+    {
+      "id": "zone-settings-change-web-application-firewall-waf-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/waf"
+    },
+    {
+      "id": "zone-settings-change-http2-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/http2"
+    },
+    {
+      "id": "zone-settings-change-http3-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/http3"
+    },
+    {
+      "id": "zone-settings-change-0-rtt-session-resumption-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/0rtt"
+    },
+    {
+      "id": "zone-settings-change-pseudo-ipv4-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/pseudo_ipv4"
+    },
+    {
+      "id": "zone-settings-change-websockets-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/websockets"
+    },
+    {
+      "id": "zone-settings-change-image-resizing-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/image_resizing"
+    },
+    {
+      "id": "zone-settings-change-http/2-edge-prioritization-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/h2_prioritization"
+    },
+    {
+      "id": "zone-settings-change-automatic-platform-optimization-for-wordpress-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/automatic_platform_optimization"
+    },
+    {
+      "id": "zone-analytics-dashboard",
+      "needed_permissions": "#analytics:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/analytics/dashboard"
+    },
+    {
+      "id": "zone-analytics-analytics-by-co-locations",
+      "needed_permissions": "#analytics:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/analytics/colos"
+    },
+    {
+      "id": "logs-received-get-log-retention-flag",
+      "needed_permissions": "#logs:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/logs/control/retention/flag"
+    },
+    {
+      "id": "logs-received-update-log-retention-flag",
+      "needed_permissions": "#logs:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/logs/control/retention/flag"
+    },
+    {
+      "id": "logs-received-logs-received",
+      "needed_permissions": "#logs:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/logs/received"
+    },
+    {
+      "id": "logs-received-logs-rayids",
+      "needed_permissions": "#logs:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/logs/rayids/:ray_identifier"
+    },
+    {
+      "id": "logs-received-fields",
+      "needed_permissions": "#logs:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/logs/received/fields"
+    },
+    {
+      "id": "logpush-jobs-list-logpush-jobs",
+      "needed_permissions": "#logs:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/logpush/jobs"
+    },
+    {
+      "id": "logpush-jobs-list-logpush-jobs-for-a-dataset",
+      "needed_permissions": "#logs:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/logpush/datasets/:dataset/jobs"
+    },
+    {
+      "id": "logpush-jobs-fields",
+      "needed_permissions": "#logs:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/logpush/datasets/:dataset/fields"
+    },
+    {
+      "id": "logpush-jobs-get-ownership-challenge",
+      "needed_permissions": "#logs:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/logpush/ownership"
+    },
+    {
+      "id": "logpush-jobs-validate-ownership-challenge",
+      "needed_permissions": "#logs:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/logpush/ownership/validate"
+    },
+    {
+      "id": "logpush-jobs-validate-origin",
+      "needed_permissions": "#logs:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/logpush/validate/origin"
+    },
+    {
+      "id": "logpush-jobs-create-logpush-job",
+      "needed_permissions": "#logs:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/logpush/jobs"
+    },
+    {
+      "id": "logpush-jobs-logpush-job-details",
+      "needed_permissions": "#logs:edit",
+      "method": "GET",
+      "url": "zones/:zone_identifier/logpush/jobs/:job_identifier"
+    },
+    {
+      "id": "logpush-jobs-update-logpush-job",
+      "needed_permissions": "#logs:edit",
+      "method": "PUT",
+      "url": "zones/:zone_identifier/logpush/jobs/:job_identifier"
+    },
+    {
+      "id": "logpush-jobs-delete-logpush-job",
+      "needed_permissions": "#logs:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/logpush/jobs/:job_identifier"
+    },
+    {
+      "id": "logpush-jobs-check-destination-exists",
+      "needed_permissions": "#logs:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/logpush/validate/destination/exists"
+    },
+    {
+      "id": "dns-records-for-a-zone-list-dns-records",
+      "needed_permissions": "#dns_records:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/dns_records"
+    },
+    {
+      "id": "dns-records-for-a-zone-create-dns-record",
+      "needed_permissions": "#dns_records:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/dns_records"
+    },
+    {
+      "id": "dns-records-for-a-zone-dns-record-details",
+      "needed_permissions": "#dns_records:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/dns_records/:identifier"
+    },
+    {
+      "id": "dns-records-for-a-zone-update-dns-record",
+      "needed_permissions": "#dns_records:edit",
+      "method": "PUT",
+      "url": "zones/:zone_identifier/dns_records/:identifier"
+    },
+    {
+      "id": "dns-records-for-a-zone-patch-dns-record",
+      "needed_permissions": "#dns_records:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/dns_records/:identifier"
+    },
+    {
+      "id": "dns-records-for-a-zone-delete-dns-record",
+      "needed_permissions": "#dns_records:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/dns_records/:identifier"
+    },
+    {
+      "id": "dns-records-for-a-zone-import-dns-records",
+      "needed_permissions": "#dns_records:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/dns_records/import"
+    },
+    {
+      "id": "dns-records-for-a-zone-export-dns-records",
+      "needed_permissions": "#dns_records:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/dns_records/export"
+    },
+    {
+      "id": "dnssec-dnssec-details",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/dnssec"
+    },
+    {
+      "id": "dnssec-edit-dnssec-status",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/dnssec"
+    },
+    {
+      "id": "dnssec-delete-dnssec-records",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/dnssec"
+    },
+    {
+      "id": "dns-firewall-list-dns-firewall-clusters",
+      "needed_permissions": "#dns_records:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/virtual_dns"
+    },
+    {
+      "id": "dns-firewall-dns-firewall-cluster-details",
+      "needed_permissions": "#dns_records:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/virtual_dns/:identifier"
+    },
+    {
+      "id": "dns-firewall-update-dns-firewall-cluster",
+      "needed_permissions": "#dns_records:edit",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/virtual_dns/:identifier"
+    },
+    {
+      "id": "dns-firewall-delete-dns-firewall-cluster",
+      "needed_permissions": "#dns_records:edit",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/virtual_dns/:identifier"
+    },
+    {
+      "id": "dns-firewall-create-dns-firewall-cluster",
+      "needed_permissions": "#dns_records:edit",
+      "method": "POST",
+      "url": "accounts/:account_identifier/virtual_dns"
+    },
+    {
+      "id": "secondary-dns-secondary-zone-configuration-details",
+      "needed_permissions": "#dns_records:read",
+      "method": "GET",
+      "url": "zones/:identifier/secondary_dns"
+    },
+    {
+      "id": "secondary-dns-update-secondary-zone-configuration",
+      "needed_permissions": "#dns_records:edit",
+      "method": "PUT",
+      "url": "zones/:identifier/secondary_dns"
+    },
+    {
+      "id": "secondary-dns-delete-secondary-zone-configuration",
+      "needed_permissions": "#dns_records:edit",
+      "method": "DELETE",
+      "url": "zones/:identifier/secondary_dns"
+    },
+    {
+      "id": "secondary-dns-create-secondary-zone-configuration",
+      "needed_permissions": "#dns_records:edit",
+      "method": "POST",
+      "url": "zones/:identifier/secondary_dns"
+    },
+    {
+      "id": "secondary-dns-force-secondary-zone-axfr",
+      "needed_permissions": "#dns_records:edit",
+      "method": "POST",
+      "url": "zones/:identifier/secondary_dns/force_axfr"
+    },
+    {
+      "id": "secondary-dns-tsig--list-tsigs",
+      "needed_permissions": "#dns_records:read#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/secondary_dns/tsigs"
+    },
+    {
+      "id": "secondary-dns-tsig--tsig-details",
+      "needed_permissions": "#dns_records:read#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/secondary_dns/tsigs/:identifier"
+    },
+    {
+      "id": "secondary-dns-tsig--update-tsig",
+      "needed_permissions": "#dns_records:edit#organization:read",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/secondary_dns/tsigs/:identifier"
+    },
+    {
+      "id": "secondary-dns-tsig--delete-tsig",
+      "needed_permissions": "#dns_records:edit#organization:read",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/secondary_dns/tsigs/:identifier"
+    },
+    {
+      "id": "secondary-dns-tsig--create-tsig",
+      "needed_permissions": "#dns_records:edit#organization:read",
+      "method": "POST",
+      "url": "accounts/:account_identifier/secondary_dns/tsigs"
+    },
+    {
+      "id": "secondary-dns-primary--list-primaries",
+      "needed_permissions": "#dns_records:read#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/secondary_dns/primaries"
+    },
+    {
+      "id": "secondary-dns-primary--primary-details",
+      "needed_permissions": "#dns_records:read#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/secondary_dns/primaries/:identifier"
+    },
+    {
+      "id": "secondary-dns-primary--update-primary",
+      "needed_permissions": "#dns_records:edit#organization:read",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/secondary_dns/primaries/:identifier"
+    },
+    {
+      "id": "secondary-dns-primary--delete-primary",
+      "needed_permissions": "#dns_records:edit#organization:read",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/secondary_dns/primaries/:identifier"
+    },
+    {
+      "id": "secondary-dns-primary--create-primary",
+      "needed_permissions": "#dns_records:edit#organization:read",
+      "method": "POST",
+      "url": "accounts/:account_identifier/secondary_dns/primaries"
+    },
+    {
+      "id": "account-level-custom-nameservers-list-account-custom-nameservers",
+      "needed_permissions": "#dns_records:read#organization:read",
+      "method": "GET",
+      "url": "accounts/:identifier/custom_ns"
+    },
+    {
+      "id": "account-level-custom-nameservers-add-account-custom-nameserver",
+      "needed_permissions": "#dns_records:edit#organization:edit",
+      "method": "POST",
+      "url": "accounts/:identifier/custom_ns"
+    },
+    {
+      "id": "account-level-custom-nameservers-verify-account-custom-nameserver-glue-records",
+      "needed_permissions": "#dns_records:edit#organization:edit",
+      "method": "POST",
+      "url": "accounts/:identifier/custom_ns/verify"
+    },
+    {
+      "id": "account-level-custom-nameservers-delete-account-custom-nameserver",
+      "needed_permissions": "#dns_records:edit#organization:edit",
+      "method": "DELETE",
+      "url": "accounts/:identifier/custom_ns/:ns_name"
+    },
+    {
+      "id": "account-level-custom-nameservers-get-eligible-zones-for-account-custom-nameservers",
+      "needed_permissions": "#dns_records:read#organization:read",
+      "method": "GET",
+      "url": "accounts/:identifier/custom_ns/availability"
+    },
+    {
+      "id": "account-level-custom-nameservers-usage-for-a-zone-get-account-custom-nameserver-related-zone-metadata",
+      "needed_permissions": "#dns_records:read#organization:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/custom_ns"
+    },
+    {
+      "id": "account-level-custom-nameservers-usage-for-a-zone-set-account-custom-nameserver-related-zone-metadata",
+      "needed_permissions": "#dns_records:edit#organization:edit",
+      "method": "PUT",
+      "url": "zones/:zone_identifier/custom_ns"
+    },
+    {
+      "id": "custom-pages-for-a-zone-list-available-custom-pages",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/custom_pages"
+    },
+    {
+      "id": "custom-pages-for-a-zone-custom-page-details",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/custom_pages/:identifier"
+    },
+    {
+      "id": "custom-pages-for-a-zone-update-custom-page-url",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PUT",
+      "url": "zones/:zone_identifier/custom_pages/:identifier"
+    },
+    {
+      "id": "custom-ssl-for-a-zone-list-ssl-configurations",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/custom_certificates"
+    },
+    {
+      "id": "custom-ssl-for-a-zone-create-ssl-configuration",
+      "needed_permissions": "#ssl:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/custom_certificates"
+    },
+    {
+      "id": "custom-ssl-for-a-zone-ssl-configuration-details",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/custom_certificates/:identifier"
+    },
+    {
+      "id": "custom-ssl-for-a-zone-edit-ssl-configuration",
+      "needed_permissions": "#ssl:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/custom_certificates/:identifier"
+    },
+    {
+      "id": "custom-ssl-for-a-zone-delete-ssl-configuration",
+      "needed_permissions": "#ssl:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/custom_certificates/:identifier"
+    },
+    {
+      "id": "custom-ssl-for-a-zone-re-prioritize-ssl-certificates",
+      "needed_permissions": "#ssl:edit",
+      "method": "PUT",
+      "url": "zones/:zone_identifier/custom_certificates/prioritize"
+    },
+    {
+      "id": "custom-hostname-for-a-zone-list-custom-hostnames",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/custom_hostnames"
+    },
+    {
+      "id": "custom-hostname-for-a-zone-create-custom-hostname",
+      "needed_permissions": "#ssl:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/custom_hostnames"
+    },
+    {
+      "id": "custom-hostname-for-a-zone-custom-hostname-details",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/custom_hostnames/:identifier"
+    },
+    {
+      "id": "custom-hostname-for-a-zone-edit-custom-hostname",
+      "needed_permissions": "#ssl:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/custom_hostnames/:identifier"
+    },
+    {
+      "id": "custom-hostname-for-a-zone-delete-custom-hostname-and-any-issued-ssl-certificates-",
+      "needed_permissions": "#ssl:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/custom_hostnames/:identifier"
+    },
+    {
+      "id": "custom-hostname-fallback-origin-for-a-zone-get-fallback-origin-for-custom-hostnames",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/custom_hostnames/fallback_origin"
+    },
+    {
+      "id": "custom-hostname-fallback-origin-for-a-zone-update-fallback-origin-for-custom-hostnames",
+      "needed_permissions": "#ssl:edit",
+      "method": "PUT",
+      "url": "zones/:zone_identifier/custom_hostnames/fallback_origin"
+    },
+    {
+      "id": "custom-hostname-fallback-origin-for-a-zone-delete-fallback-origin-for-custom-hostnames",
+      "needed_permissions": "#ssl:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/custom_hostnames/fallback_origin"
+    },
+    {
+      "id": "keyless-ssl-for-a-zone-list-keyless-ssl-configurations",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/keyless_certificates"
+    },
+    {
+      "id": "keyless-ssl-for-a-zone-create-keyless-ssl-configuration",
+      "needed_permissions": "#ssl:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/keyless_certificates"
+    },
+    {
+      "id": "keyless-ssl-for-a-zone-get-keyless-ssl-configuration",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/keyless_certificates/:identifier"
+    },
+    {
+      "id": "keyless-ssl-for-a-zone-edit-keyless-ssl-configuration",
+      "needed_permissions": "#ssl:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/keyless_certificates/:identifier"
+    },
+    {
+      "id": "keyless-ssl-for-a-zone-delete-keyless-ssl-configuration",
+      "needed_permissions": "#ssl:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/keyless_certificates/:identifier"
+    },
+    {
+      "id": "analyze-certificate-analyze-certificate",
+      "needed_permissions": "#ssl:read",
+      "method": "POST",
+      "url": "zones/:identifier/ssl/analyze"
+    },
+    {
+      "id": "certificate-packs-list-certificate-packs",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/ssl/certificate_packs"
+    },
+    {
+      "id": "certificate-packs-get-certificate-pack",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/ssl/certificate_packs/:identifier"
+    },
+    {
+      "id": "certificate-packs-get-certificate-pack-quotas",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/ssl/certificate_packs/quota"
+    },
+    {
+      "id": "certificate-packs-order-certificate-pack",
+      "needed_permissions": "#ssl:read#ssl:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/ssl/certificate_packs"
+    },
+    {
+      "id": "certificate-packs-order-advanced-certificate-manager-certificate-pack",
+      "needed_permissions": "#ssl:read#ssl:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/ssl/certificate_packs/order"
+    },
+    {
+      "id": "certificate-packs-restart-validation-for-advanced-certificate-manager-certificate-pack",
+      "needed_permissions": "#ssl:read#ssl:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/ssl/certificate_packs/:identifier"
+    },
+    {
+      "id": "certificate-packs-delete-advanced-certificate-manager-certificate-pack",
+      "needed_permissions": "#ssl:read#ssl:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/ssl/certificate_packs/:identifier"
+    },
+    {
+      "id": "ssl-verification-ssl-verification-details",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/ssl/verification"
+    },
+    {
+      "id": "ssl-verification-edit-ssl-certificate-pack-validation-method",
+      "needed_permissions": "#ssl:read#ssl:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/ssl/verification/:cert_pack_uuid"
+    },
+    {
+      "id": "universal-ssl-settings-for-a-zone-universal-ssl-settings-details",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/ssl/universal/settings"
+    },
+    {
+      "id": "universal-ssl-settings-for-a-zone-edit-universal-ssl-settings",
+      "needed_permissions": "#ssl:read#ssl:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/ssl/universal/settings"
+    },
+    {
+      "id": "zone-level-authenticated-origin-pulls-get-enablement-setting-for-zone",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/origin_tls_client_auth/settings"
+    },
+    {
+      "id": "zone-level-authenticated-origin-pulls-set-enablement-for-zone",
+      "needed_permissions": "#ssl:edit",
+      "method": "PUT",
+      "url": "zones/:zone_identifier/origin_tls_client_auth/settings"
+    },
+    {
+      "id": "zone-level-authenticated-origin-pulls-upload-certificate",
+      "needed_permissions": "#ssl:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/origin_tls_client_auth"
+    },
+    {
+      "id": "zone-level-authenticated-origin-pulls-list-certificates",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/origin_tls_client_auth"
+    },
+    {
+      "id": "zone-level-authenticated-origin-pulls-get-certificate-details",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/origin_tls_client_auth/:identifier"
+    },
+    {
+      "id": "zone-level-authenticated-origin-pulls-delete-certificate",
+      "needed_permissions": "#ssl:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/origin_tls_client_auth/:identifier"
+    },
+    {
+      "id": "per-hostname-authenticated-origin-pull-upload-a-hostname-client-certificate",
+      "needed_permissions": "#ssl:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/origin_tls_client_auth/hostnames/certificates"
+    },
+    {
+      "id": "per-hostname-authenticated-origin-pull-list-certificates",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/origin_tls_client_auth/hostnames/certificates"
+    },
+    {
+      "id": "per-hostname-authenticated-origin-pull-get-the-hostname-client-certificate",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/origin_tls_client_auth/hostnames/certificates/:identifier"
+    },
+    {
+      "id": "per-hostname-authenticated-origin-pull-delete-hostname-client-certificate",
+      "needed_permissions": "#ssl:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/origin_tls_client_auth/hostnames/certificates/:identifier"
+    },
+    {
+      "id": "per-hostname-authenticated-origin-pull-enable-or-disable-a-hostname-for-client-authentication",
+      "needed_permissions": "#ssl:edit",
+      "method": "PUT",
+      "url": "zones/:zone_identifier/origin_tls_client_auth/hostnames"
+    },
+    {
+      "id": "per-hostname-authenticated-origin-pull-get-the-hostname-status-for-client-authentication",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/origin_tls_client_auth/hostnames/:hostname"
+    },
+    {
+      "id": "worker-script-upload-worker",
+      "needed_permissions": "com.cloudflare.edge.worker.script.create",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/workers/scripts/:script_name"
+    },
+    {
+      "id": "worker-script-list-workers",
+      "needed_permissions": "com.cloudflare.edge.worker.script.list",
+      "method": "GET",
+      "url": "accounts/:account_identifier/workers/scripts"
+    },
+    {
+      "id": "worker-script-download-worker",
+      "needed_permissions": "com.cloudflare.edge.worker.script.read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/workers/scripts/:script_name"
+    },
+    {
+      "id": "worker-script-delete-worker",
+      "needed_permissions": "com.cloudflare.edge.worker.script.delete",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/workers/scripts/:script_name"
+    },
+    {
+      "id": "worker-script-update-usage-model",
+      "needed_permissions": "com.cloudflare.edge.worker.script.create",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/workers/scripts/:script_name/usage-model"
+    },
+    {
+      "id": "worker-script-fetch-usage-model",
+      "needed_permissions": "com.cloudflare.edge.worker.script.read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/workers/scripts/:script_name/usage-model"
+    },
+    {
+      "id": "worker-routes-create-route",
+      "needed_permissions": "com.cloudflare.edge.worker.route.create",
+      "method": "POST",
+      "url": "zones/:zone_id/workers/routes"
+    },
+    {
+      "id": "worker-routes-list-routes",
+      "needed_permissions": "com.cloudflare.edge.worker.route.list",
+      "method": "GET",
+      "url": "zones/:zone_id/workers/routes"
+    },
+    {
+      "id": "worker-routes-get-route",
+      "needed_permissions": "com.cloudflare.edge.worker.route.read",
+      "method": "GET",
+      "url": "zones/:zone_id/workers/routes/:route_id"
+    },
+    {
+      "id": "worker-routes-update-route",
+      "needed_permissions": "com.cloudflare.edge.worker.route.update",
+      "method": "PUT",
+      "url": "zones/:zone_id/workers/routes/:route_id"
+    },
+    {
+      "id": "worker-routes-delete-route",
+      "needed_permissions": "com.cloudflare.edge.worker.route.delete",
+      "method": "DELETE",
+      "url": "zones/:zone_id/workers/routes/:route_id"
+    },
+    {
+      "id": "workers-kv-namespace-list-namespaces",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.namespace.list",
+      "method": "GET",
+      "url": "accounts/:account_identifier/storage/kv/namespaces"
+    },
+    {
+      "id": "workers-kv-namespace-create-a-namespace",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.namespace.create",
+      "method": "POST",
+      "url": "accounts/:account_identifier/storage/kv/namespaces"
+    },
+    {
+      "id": "workers-kv-namespace-remove-a-namespace",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.namespace.delete",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/storage/kv/namespaces/:namespace_identifier"
+    },
+    {
+      "id": "workers-kv-namespace-rename-a-namespace",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.namespace.delete",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/storage/kv/namespaces/:namespace_identifier"
+    },
+    {
+      "id": "workers-kv-namespace-list-a-namespace-s-keys",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.key.list",
+      "method": "GET",
+      "url": "accounts/:account_identifier/storage/kv/namespaces/:namespace_identifier/keys"
+    },
+    {
+      "id": "workers-kv-namespace-read-key-value-pair",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.key.read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/storage/kv/namespaces/:namespace_identifier/values/:key_name"
+    },
+    {
+      "id": "workers-kv-namespace-write-key-value-pair",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.key.update",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/storage/kv/namespaces/:namespace_identifier/values/:key_name?expiration=:expiration&expiration_ttl=:expiration_ttl"
+    },
+    {
+      "id": "workers-kv-namespace-write-key-value-pair-with-metadata",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.key.update",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/storage/kv/namespaces/:namespace_identifier/values/:key_name?expiration=:expiration&expiration_ttl=:expiration_ttl"
+    },
+    {
+      "id": "workers-kv-namespace-write-multiple-key-value-pairs",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.key.update",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/storage/kv/namespaces/:namespace_identifier/bulk"
+    },
+    {
+      "id": "workers-kv-namespace-delete-key-value-pair",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.key.delete",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/storage/kv/namespaces/:namespace_identifier/values/:key_name"
+    },
+    {
+      "id": "workers-kv-namespace-delete-multiple-key-value-pairs",
+      "needed_permissions": "com.cloudflare.edge.storage.kv.key.delete",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/storage/kv/namespaces/:namespace_identifier/bulk"
+    },
+    {
+      "id": "worker-cron-trigger-update-cron-triggers",
+      "needed_permissions": "com.cloudflare.edge.worker.cron.trigger.update",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/workers/scripts/:script_name/schedules"
+    },
+    {
+      "id": "worker-cron-trigger-get-cron-triggers",
+      "needed_permissions": "com.cloudflare.edge.worker.cron.trigger.read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/workers/scripts/:script_name/schedules"
+    },
+    {
+      "id": "worker-subdomain-create-subdomain",
+      "needed_permissions": "com.cloudflare.edge.worker.cron.subdomain.create",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/workers/subdomain"
+    },
+    {
+      "id": "worker-subdomain-get-subdomain",
+      "needed_permissions": "com.cloudflare.edge.worker.cron.subdomain.read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/workers/subdomain"
+    },
+    {
+      "id": "worker-account-settings-create-worker-account-settings",
+      "needed_permissions": "com.cloudflare.api.account.update",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/workers/account-settings"
+    },
+    {
+      "id": "worker-account-settings-fetch-worker-account-settings",
+      "needed_permissions": "com.cloudflare.api.account.read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/workers/account-settings"
+    },
+    {
+      "id": "page-rules-for-a-zone-list-page-rules",
+      "needed_permissions": "#zone:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/pagerules"
+    },
+    {
+      "id": "page-rules-for-a-zone-create-page-rule",
+      "needed_permissions": "#zone:edit",
+      "method": "POST",
+      "url": "zones/:zone_identifier/pagerules"
+    },
+    {
+      "id": "page-rules-for-a-zone-page-rule-details",
+      "needed_permissions": "#zone:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/pagerules/:identifier"
+    },
+    {
+      "id": "page-rules-for-a-zone-update-page-rule",
+      "needed_permissions": "#zone:edit",
+      "method": "PUT",
+      "url": "zones/:zone_identifier/pagerules/:identifier"
+    },
+    {
+      "id": "page-rules-for-a-zone-edit-page-rule",
+      "needed_permissions": "#zone:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/pagerules/:identifier"
+    },
+    {
+      "id": "page-rules-for-a-zone-delete-page-rule",
+      "needed_permissions": "#zone:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/pagerules/:identifier"
+    },
+    {
+      "id": "available-page-rules-for-a-zone-list-available-page-rule-setting",
+      "needed_permissions": "#zone:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/pagerules/settings"
+    },
+    {
+      "id": "account-level-firewall-access-rule-list-access-rules",
+      "needed_permissions": "#waf:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/firewall/access_rules/rules"
+    },
+    {
+      "id": "account-level-firewall-access-rule-create-access-rule",
+      "needed_permissions": "#waf:edit",
+      "method": "POST",
+      "url": "accounts/:account_identifier/firewall/access_rules/rules"
+    },
+    {
+      "id": "account-level-firewall-access-rule-access-rule-details",
+      "needed_permissions": "#waf:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/firewall/access_rules/rules/:identifier"
+    },
+    {
+      "id": "account-level-firewall-access-rule-update-access-rule",
+      "needed_permissions": "#waf:edit",
+      "method": "PATCH",
+      "url": "accounts/:account_identifier/firewall/access_rules/rules/:identifier"
+    },
+    {
+      "id": "account-level-firewall-access-rule-delete-access-rule",
+      "needed_permissions": "#waf:edit",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/firewall/access_rules/rules/:identifier"
+    },
+    {
+      "id": "organization-level-firewall-access-rule-list-access-rules",
+      "needed_permissions": "#waf:edit",
+      "method": "GET",
+      "url": "organizations/:organization_id/firewall/access_rules/rules"
+    },
+    {
+      "id": "organization-level-firewall-access-rule-create-access-rule",
+      "needed_permissions": "#waf:edit",
+      "method": "POST",
+      "url": "organizations/:organization_id/firewall/access_rules/rules"
+    },
+    {
+      "id": "organization-level-firewall-access-rule-edit-access-rule",
+      "needed_permissions": "#waf:edit",
+      "method": "PATCH",
+      "url": "organizations/:organization_id/firewall/access_rules/rules/:identifier"
+    },
+    {
+      "id": "organization-level-firewall-access-rule-delete-access-rule",
+      "needed_permissions": "#waf:edit",
+      "method": "DELETE",
+      "url": "organizations/:organization_id/firewall/access_rules/rules/:identifier"
+    },
+    {
+      "id": "railgun-connections-for-a-zone-list-available-railguns",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/railguns"
+    },
+    {
+      "id": "railgun-connections-for-a-zone-railgun-details",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/railguns/:identifier"
+    },
+    {
+      "id": "railgun-connections-for-a-zone-connect-or-disconnect-a-railgun",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/railguns/:identifier"
+    },
+    {
+      "id": "railgun-connections-for-a-zone-test-railgun-connection",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/railguns/:identifier/diagnose"
+    },
+    {
+      "id": "account-railguns-list-railguns",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/railguns"
+    },
+    {
+      "id": "account-railguns-railgun-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/railguns/:identifier"
+    },
+    {
+      "id": "account-railguns-update-railgun",
+      "needed_permissions": "#organization:edit",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/railguns/:identifier"
+    },
+    {
+      "id": "account-railguns-delete-railgun",
+      "needed_permissions": "#organization:edit",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/railguns/:identifier"
+    },
+    {
+      "id": "railgun-connections-list-connections",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/railguns/:railgun_identifier/connections"
+    },
+    {
+      "id": "railgun-connections-connection-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/railguns/:railgun_identifier/connections/:identifier"
+    },
+    {
+      "id": "railgun-connections-update-connection",
+      "needed_permissions": "#organization:edit",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/railguns/:railgun_identifier/connections/:identifier"
+    },
+    {
+      "id": "railgun-connections-delete-connection",
+      "needed_permissions": "#organization:edit",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/railguns/:railgun_identifier/connections/:identifier"
+    },
+    {
+      "id": "railgun-connections-create-connection",
+      "needed_permissions": "#organization:edit",
+      "method": "POST",
+      "url": "accounts/:account_identifier/railguns/:railgun_identifier/connections"
+    },
+    {
+      "id": "custom-pages-account--list-custom-pages",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/custom_pages"
+    },
+    {
+      "id": "custom-pages-account--custom-page-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/custom_pages/:identifier"
+    },
+    {
+      "id": "custom-pages-account--update-custom-page",
+      "needed_permissions": "#organization:edit",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/custom_pages/:identifier"
+    },
+    {
+      "id": "magic-transit-static-routes-list-routes",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/magic/routes"
+    },
+    {
+      "id": "magic-transit-static-routes-route-details",
+      "needed_permissions": "#organization:read",
+      "method": "GET",
+      "url": "accounts/:account_identifier/magic/routes/:route_identifier"
+    },
+    {
+      "id": "magic-transit-static-routes-create-routes",
+      "needed_permissions": "#organization:edit",
+      "method": "POST",
+      "url": "accounts/:account_identifier/magic/routes?validate_only=:validate_only"
+    },
+    {
+      "id": "magic-transit-static-routes-update-route",
+      "needed_permissions": "#organization:edit",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/magic/routes/:route_identifier?validate_only=:validate_only"
+    },
+    {
+      "id": "magic-transit-static-routes-update-many-routes",
+      "needed_permissions": "#organization:edit",
+      "method": "PUT",
+      "url": "accounts/:account_identifier/magic/routes?validate_only=:validate_only"
+    },
+    {
+      "id": "magic-transit-static-routes-delete-route",
+      "needed_permissions": "#organization:edit",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/magic/routes/:route_identifier"
+    }
+  ]
+}
