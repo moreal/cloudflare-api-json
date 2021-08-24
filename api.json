@@ -1675,6 +1675,18 @@
       "url": "accounts/:account_identifier/workers/scripts/:script_name/schedules"
     },
     {
+      "id": "worker-tail-logs-start-tail",
+      "needed_permissions": "com.cloudflare.edge.worker.script.readcom.cloudflare.edge.worker.tail.create",
+      "method": "POST",
+      "url": "accounts/:account_identifier/workers/scripts/:script_name/tails"
+    },
+    {
+      "id": "worker-tail-logs-delete-tail",
+      "needed_permissions": "com.cloudflare.edge.worker.script.readcom.cloudflare.edge.worker.tail.create",
+      "method": "DELETE",
+      "url": "accounts/:account_identifier/workers/scripts/:script_name/tails/:id"
+    },
+    {
       "id": "worker-subdomain-create-subdomain",
       "needed_permissions": "com.cloudflare.edge.worker.cron.subdomain.create",
       "method": "PUT",
