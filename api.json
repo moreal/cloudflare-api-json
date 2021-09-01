@@ -559,6 +559,12 @@
       "url": "zones/:zone_identifier/settings/ssl"
     },
     {
+      "id": "zone-settings-get-ssl/tls-recommender-enrollment",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/ssl_recommender"
+    },
+    {
       "id": "zone-settings-get-minimum-tls-version-setting",
       "needed_permissions": "#zone_settings:edit",
       "method": "GET",
@@ -833,6 +839,12 @@
       "needed_permissions": "#zone_settings:edit",
       "method": "PATCH",
       "url": "zones/:zone_identifier/settings/ssl"
+    },
+    {
+      "id": "zone-settings-change-ssl/tls-recommender-enrollment",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/ssl_recommender"
     },
     {
       "id": "zone-settings-change-tls-client-auth-setting",
@@ -1435,6 +1447,12 @@
       "url": "zones/:zone_identifier/ssl/certificate_packs/:identifier"
     },
     {
+      "id": "ssl/tls-mode-recommendation-ssl/tls-recommendation",
+      "needed_permissions": "#ssl:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/ssl/recommendation"
+    },
+    {
       "id": "ssl-verification-ssl-verification-details",
       "needed_permissions": "#ssl:read",
       "method": "GET",
@@ -1678,6 +1696,12 @@
       "id": "worker-tail-logs-start-tail",
       "needed_permissions": "com.cloudflare.edge.worker.script.readcom.cloudflare.edge.worker.tail.create",
       "method": "POST",
+      "url": "accounts/:account_identifier/workers/scripts/:script_name/tails"
+    },
+    {
+      "id": "worker-tail-logs-list-tails",
+      "needed_permissions": "com.cloudflare.edge.worker.script.read",
+      "method": "GET",
       "url": "accounts/:account_identifier/workers/scripts/:script_name/tails"
     },
     {
