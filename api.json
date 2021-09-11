@@ -931,6 +931,24 @@
       "url": "zones/:zone_identifier/settings/automatic_platform_optimization"
     },
     {
+      "id": "zone-cache-settings-get-variants-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/cache/variants"
+    },
+    {
+      "id": "zone-cache-settings-change-variants-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/cache/variants"
+    },
+    {
+      "id": "zone-cache-settings-delete-variants-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "DELETE",
+      "url": "zones/:zone_identifier/cache/variants"
+    },
+    {
       "id": "zone-analytics-dashboard",
       "needed_permissions": "#analytics:read",
       "method": "GET",
