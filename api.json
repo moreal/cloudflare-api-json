@@ -139,84 +139,6 @@
       "url": "accounts/:account_identifier/subscriptions/:subscription_identifier"
     },
     {
-      "id": "organizations-organization-details",
-      "needed_permissions": "#organization:read",
-      "method": "GET",
-      "url": "organizations/:identifier"
-    },
-    {
-      "id": "organizations-edit-organization",
-      "needed_permissions": "#organization:edit",
-      "method": "PATCH",
-      "url": "organizations/:identifier"
-    },
-    {
-      "id": "organization-invites-list-invitations",
-      "needed_permissions": "#organization:read",
-      "method": "GET",
-      "url": "organizations/:organization_identifier/invites"
-    },
-    {
-      "id": "organization-invites-create-invitation",
-      "needed_permissions": "#organization:edit",
-      "method": "POST",
-      "url": "organizations/:organization_identifier/invites"
-    },
-    {
-      "id": "organization-invites-invitation-details",
-      "needed_permissions": "#organization:read",
-      "method": "GET",
-      "url": "organizations/:organization_identifier/invites/:identifier"
-    },
-    {
-      "id": "organization-invites-edit-invitation-roles",
-      "needed_permissions": "#organization:edit",
-      "method": "PATCH",
-      "url": "organizations/:organization_identifier/invites/:identifier"
-    },
-    {
-      "id": "organization-invites-cancel-invitation",
-      "needed_permissions": "#organization:edit",
-      "method": "DELETE",
-      "url": "organizations/:organization_identifier/invites/:identifier"
-    },
-    {
-      "id": "organization-members-list-members",
-      "needed_permissions": "#organization:read",
-      "method": "GET",
-      "url": "organizations/:organization_identifier/members"
-    },
-    {
-      "id": "organization-members-member-details",
-      "needed_permissions": "#organization:read",
-      "method": "GET",
-      "url": "organizations/:organization_identifier/members/:identifier"
-    },
-    {
-      "id": "organization-members-edit-member-roles",
-      "needed_permissions": "#organization:edit",
-      "method": "PATCH",
-      "url": "organizations/:organization_identifier/members/:identifier"
-    },
-    {
-      "id": "organization-members-remove-member",
-      "needed_permissions": "#organization:edit",
-      "method": "DELETE",
-      "url": "organizations/:organization_identifier/members/:identifier"
-    },
-    {
-      "id": "organization-roles-list-roles",
-      "needed_permissions": "#organization:read",
-      "method": "GET",
-      "url": "organizations/:organization_identifier/roles"
-    },
-    {
-      "id": "organization-roles-role-details",
-      "needed_permissions": "#organization:read",
-      "method": "GET",
-      "url": "organizations/:organization_identifier/roles/:identifier"
-    },
-    {
       "id": "user-billing-profile-billing-profile-details",
       "needed_permissions": "#billing:read",
       "method": "GET",
@@ -1825,30 +1747,6 @@
       "url": "accounts/:account_identifier/firewall/access_rules/rules/:identifier"
     },
     {
-      "id": "organization-level-firewall-access-rule-list-access-rules",
-      "needed_permissions": "#waf:edit",
-      "method": "GET",
-      "url": "organizations/:organization_id/firewall/access_rules/rules"
-    },
-    {
-      "id": "organization-level-firewall-access-rule-create-access-rule",
-      "needed_permissions": "#waf:edit",
-      "method": "POST",
-      "url": "organizations/:organization_id/firewall/access_rules/rules"
-    },
-    {
-      "id": "organization-level-firewall-access-rule-edit-access-rule",
-      "needed_permissions": "#waf:edit",
-      "method": "PATCH",
-      "url": "organizations/:organization_id/firewall/access_rules/rules/:identifier"
-    },
-    {
-      "id": "organization-level-firewall-access-rule-delete-access-rule",
-      "needed_permissions": "#waf:edit",
-      "method": "DELETE",
-      "url": "organizations/:organization_id/firewall/access_rules/rules/:identifier"
-    },
-    {
       "id": "railgun-connections-for-a-zone-list-available-railguns",
       "needed_permissions": "#zone_settings:read",
       "method": "GET",
@@ -1943,12 +1841,6 @@
       "needed_permissions": "#organization:edit",
       "method": "PUT",
       "url": "accounts/:account_identifier/custom_pages/:identifier"
-    },
-    {
-      "id": "magic-transit-static-routes-list-routes",
-      "needed_permissions": "#organization:read",
-      "method": "GET",
-      "url": "accounts/:account_identifier/magic/routes"
     },
     {
       "id": "magic-transit-static-routes-route-details",
