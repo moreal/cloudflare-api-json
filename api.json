@@ -517,6 +517,12 @@
       "url": "zones/:zone_identifier/settings/true_client_ip_header"
     },
     {
+      "id": "zone-settings-get-proxy-read-timeout-setting",
+      "needed_permissions": "#zone_settings:read",
+      "method": "GET",
+      "url": "zones/:zone_identifier/settings/proxy_read_timeout"
+    },
+    {
       "id": "zone-settings-get-web-application-firewall-waf-setting",
       "needed_permissions": "#zone_settings:read",
       "method": "GET",
@@ -779,6 +785,12 @@
       "needed_permissions": "#zone_settings:edit",
       "method": "PATCH",
       "url": "zones/:zone_identifier/settings/true_client_ip_header"
+    },
+    {
+      "id": "zone-settings-change-proxy-read-timeout-setting",
+      "needed_permissions": "#zone_settings:edit",
+      "method": "PATCH",
+      "url": "zones/:zone_identifier/settings/proxy_read_timeout"
     },
     {
       "id": "zone-settings-change-minimum-tls-version-setting",
