@@ -1837,30 +1837,6 @@
       "url": "accounts/:account_identifier/firewall/access_rules/rules/:identifier"
     },
     {
-      "id": "organization-level-firewall-access-rule-list-access-rules",
-      "needed_permissions": "#waf:edit",
-      "method": "GET",
-      "url": "organizations/:organization_id/firewall/access_rules/rules"
-    },
-    {
-      "id": "organization-level-firewall-access-rule-create-access-rule",
-      "needed_permissions": "#waf:edit",
-      "method": "POST",
-      "url": "organizations/:organization_id/firewall/access_rules/rules"
-    },
-    {
-      "id": "organization-level-firewall-access-rule-edit-access-rule",
-      "needed_permissions": "#waf:edit",
-      "method": "PATCH",
-      "url": "organizations/:organization_id/firewall/access_rules/rules/:identifier"
-    },
-    {
-      "id": "organization-level-firewall-access-rule-delete-access-rule",
-      "needed_permissions": "#waf:edit",
-      "method": "DELETE",
-      "url": "organizations/:organization_id/firewall/access_rules/rules/:identifier"
-    },
-    {
       "id": "railgun-connections-for-a-zone-list-available-railguns",
       "needed_permissions": "#zone_settings:read",
       "method": "GET",
